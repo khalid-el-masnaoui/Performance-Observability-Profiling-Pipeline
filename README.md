@@ -1,1 +1,1 @@
-# Observability & Profiling Pipeline (PHP + SPX + Prometheus + Grafana + k6)
+# Performance Observability & Profiling Pipeline

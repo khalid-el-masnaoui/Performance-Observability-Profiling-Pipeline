@@ -1,1 +1,1 @@
-# Observability & Profiling Pipeline Demo (PHP + SPX + Prometheus + Grafana + k6)
+# Observability & Profiling Pipeline (PHP + SPX + Prometheus + Grafana + k6)

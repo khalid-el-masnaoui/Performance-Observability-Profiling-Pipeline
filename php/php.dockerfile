@@ -24,3 +24,10 @@ RUN git clone https://github.com/NoiseByNorthwest/php-spx.git /tmp/php-spx \
     && ./configure \
     && make \
     && make install
+
+# Install Redis extension
+RUN pecl install redis && docker-php-ext-enable redis
+
+COPY ./spx.ini /usr/local/etc/php/conf.d/spx.ini
+
+RUN docker-php-ext-enable spx

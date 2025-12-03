@@ -9,6 +9,7 @@ const redis = new Redis({
   port: 6379
 });
 
+app.post("/trigger", handleAlerts);
 
 
 app.listen(8081, () => {

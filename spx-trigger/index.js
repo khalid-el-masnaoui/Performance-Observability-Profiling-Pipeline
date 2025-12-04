@@ -30,7 +30,10 @@ async function handleAlerts(req, res) {
     }
 }
 
-
+//fallback route to log any unexpected requests
+app.post("/", async (req, res) => {
+    console.log("Received request for POST route:", req.path);
+});
 
 app.listen(8081, () => {
   console.log("SPX trigger listening on 8081");

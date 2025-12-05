@@ -1,0 +1,5 @@
+route:
+  receiver: spx
+  group_by: []
+  group_wait: 0s
+  group_interval: 1s

@@ -3,3 +3,9 @@ route:
   group_by: []
   group_wait: 0s
   group_interval: 1s
+
+receivers:
+- name: spx
+  webhook_configs:
+  - url: ${SPX_TRIGGER_URL}/trigger
+    send_resolved: false 

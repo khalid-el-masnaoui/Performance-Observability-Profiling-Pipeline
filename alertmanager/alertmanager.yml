@@ -9,3 +9,7 @@ receivers:
   webhook_configs:
   - url: ${SPX_TRIGGER_URL}/trigger
     send_resolved: false 
+  slack_configs:
+  - api_url: ${SLACK_WEBHOOK}
+    channel: "#all-alerting"
+    send_resolved: false 

@@ -13,3 +13,10 @@ receivers:
   - api_url: ${SLACK_WEBHOOK}
     channel: "#all-alerting"
     send_resolved: false 
+    title: "🚨 {{ .CommonLabels.alertname }}"
+    text: |
+      *Route:* {{ .CommonLabels.route }}
+      *Severity:* {{ .CommonLabels.severity }}
+      *Summary:* {{ .CommonAnnotations.summary }}
+      *Description:* {{ .CommonAnnotations.description }}
+      

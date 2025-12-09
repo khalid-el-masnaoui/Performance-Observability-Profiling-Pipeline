@@ -12,3 +12,10 @@ export const options = {
     },
   },
 };
+
+export default function () {
+  // Fast endpoints (baseline)
+  http.get(`${NGINX_URL}/`);
+  http.get(`${NGINX_URL}/api/users`);
+
+}

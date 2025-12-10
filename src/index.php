@@ -45,3 +45,10 @@ $histogram = $registry->getOrRegisterHistogram(
     ['method', 'route', 'status'],
     [0.01, 0.05, 0.1, 0.3, 0.5, 1, 2, 5, 8, 10, 15, 20]
 );
+
+$counter = $registry->getOrRegisterCounter(
+    'app',
+    'requests_total',
+    'Total requests',
+    ['method', 'route', 'status']
+);

@@ -1,3 +1,5 @@
 .env
 .vscode/
 spx-data/
+src/vendor/
+src/composer.lock

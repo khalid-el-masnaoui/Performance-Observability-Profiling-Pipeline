@@ -8,3 +8,11 @@ use Prometheus\Storage\APC;
 
 // Same storage as index.php
 $registry = new CollectorRegistry(new APC());
+
+$renderer = new RenderTextFormat();
+
+header('Content-Type: ' . RenderTextFormat::MIME_TYPE);
+
+echo $renderer->render(
+    $registry->getMetricFamilySamples()
+);

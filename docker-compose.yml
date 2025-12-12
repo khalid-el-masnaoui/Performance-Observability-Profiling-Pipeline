@@ -60,3 +60,15 @@ services:
       - "-nginx.scrape-uri=http://nginx/nginx_status"
     ports:
       - "9113:9113"
+
+  spx-trigger:
+    build: 
+      context: ./spx-trigger
+      dockerfile: spx.dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+      - prometheus
+      - alertmanager
+      

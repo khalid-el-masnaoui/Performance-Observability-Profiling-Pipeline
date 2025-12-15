@@ -19,3 +19,4 @@ This project is intended as a practical demo of how to wire **PHP request metric
 This project implements a modern performance engineering pipeline where:
 
 - Instrumented PHP application with Prometheus metrics
+- Slow endpoints are automatically detected

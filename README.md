@@ -13,3 +13,9 @@ This project integrates:
 
 
 This project is intended as a practical demo of how to wire **PHP request metrics**, **alerting**, and **dynamic profiler activation** together into a reproducible Docker-based observability pipeline.
+
+## Overview
+
+This project implements a modern performance engineering pipeline where:
+
+- Instrumented PHP application with Prometheus metrics

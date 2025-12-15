@@ -65,5 +65,12 @@ Grafana Dashboards + Slack Alerts
 ```bash
 project-root/
 ├── docker-compose.yml              # Service definitions
+│
+├── nginx/
+│   └── default.conf                # Nginx config and default site settings
+│
+├── php/
+│   ├── php.dockerfile              # PHP Dockerfile
+│   └── spx.ini                     # SPX configs
 
 ```

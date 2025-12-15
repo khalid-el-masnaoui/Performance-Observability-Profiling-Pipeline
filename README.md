@@ -23,3 +23,5 @@ This project implements a modern performance engineering pipeline where:
 - Redis-backed SPX trigger for automatic profiling of slow routes
 - Flamegraphs are stored, visualized and browsing via `/flamegraphs`
 - Alerts are sent to Slack when performance degrades
+
+The system is fully containerized and reproducible using Docker Compose.

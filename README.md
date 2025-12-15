@@ -72,5 +72,36 @@ project-root/
 ├── php/
 │   ├── php.dockerfile              # PHP Dockerfile
 │   └── spx.ini                     # SPX configs
+│
+├── prometheus/
+│   ├── prometheus.yml              # Prometheus scrape configuration
+│   └── alerts.yml                  # Alert rules
+│
+├── alertmanager/
+│   ├── alertmanager.dockerfile     # Alertmanager Dockerfile
+│   ├── entrypoint.sh               # Docker entrypoint
+│   └── alertmanager.yml            # Alertmanager configuration
+│
+├── spx-trigger/
+│   ├── spx.dockerfile              # PHP-SPX Dockerfile
+│   └── index.js                    # Node.js service that receives alerts and enables SPX profiling
+│
+├── k6/
+│   ├── k6.dockerfile               # K6 Dockerfile
+│   └── ingest_slow_requests.js     # Load testing script
+│   └── entrypoint.sh               # Docker entrypoint
+│
+├── src/
+│   ├── index.php                   # PHP Application entrypoint
+│   ├── metrics.php                 # PHP prometheus metrics endpoint
+│   └── flamegraphs.php             # Flamegraphs json files web viewer
+│   └── spx_prepend.php             # SPX integration
+│
+└── spx-data/                       # Persistent SPX flamegraph output
+│
+├── testing/                        # Local testing with k6
+│   └── makefile                    # Automated Testing
+│   └── scripts/
+│   └────  ingest_slow_requests.sh  # Load testing script
 
 ```

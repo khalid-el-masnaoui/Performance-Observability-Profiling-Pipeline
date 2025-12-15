@@ -27,7 +27,7 @@ This project implements a modern performance engineering pipeline where:
 The system is fully containerized and reproducible using Docker Compose.
 
 
-## Architecture
+## Architecture & Layout
 
 ### Architecture
 
@@ -57,4 +57,13 @@ Flamegraph Storage (/spx-data)
 Flamegraph UI (Web Viewer)
       ↓
 Grafana Dashboards + Slack Alerts
+```
+
+
+### Repository Layout
+
+```bash
+project-root/
+├── docker-compose.yml              # Service definitions
+
 ```

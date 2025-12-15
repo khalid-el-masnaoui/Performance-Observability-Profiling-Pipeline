@@ -1,5 +1,5 @@
 .env
 .vscode/
-spx-data/
+spx-data/*
 src/vendor/
 src/composer.lock

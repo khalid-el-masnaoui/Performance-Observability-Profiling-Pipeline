@@ -20,3 +20,4 @@ This project implements a modern performance engineering pipeline where:
 
 - Instrumented PHP application with Prometheus metrics
 - Slow endpoints are automatically detected
+- Redis-backed SPX trigger for automatic profiling of slow routes

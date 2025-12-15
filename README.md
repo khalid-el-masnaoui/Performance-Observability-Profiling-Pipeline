@@ -25,3 +25,36 @@ This project implements a modern performance engineering pipeline where:
 - Alerts are sent to Slack when performance degrades
 
 The system is fully containerized and reproducible using Docker Compose.
+
+
+## Architecture
+
+### Architecture
+
+The stack is designed to demonstrate a simple full pipeline:
+
+```bash
+[k6 Load Test]
+      ↓
+   Nginx
+      ↓
+ PHP-FPM Application
+      ↓
+Prometheus Metrics Exporter
+      ↓
+Prometheus Server
+      ↓
+Alertmanager
+      ↓
+Slow Requests Detected (P95)
+      ↓
+SPX Trigger Service
+      ↓
+SPX PHP Profiler
+      ↓
+Flamegraph Storage (/spx-data)
+      ↓
+Flamegraph UI (Web Viewer)
+      ↓
+Grafana Dashboards + Slack Alerts
+```

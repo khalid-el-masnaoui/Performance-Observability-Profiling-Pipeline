@@ -27,9 +27,7 @@ This project implements a modern performance engineering pipeline where:
 The system is fully containerized and reproducible using Docker Compose.
 
 
-## Architecture & Layout
-
-### Architecture
+## Architecture
 
 The stack is designed to demonstrate a simple full pipeline:
 
@@ -38,6 +36,7 @@ The stack is designed to demonstrate a simple full pipeline:
       ↓
    Nginx
       ↓
+
  PHP-FPM Application
       ↓
 Prometheus Metrics Exporter
@@ -60,7 +59,7 @@ Grafana Dashboards + Slack Alerts
 ```
 
 
-### Repository Layout
+## Repository Layout
 
 ```bash
 project-root/
@@ -103,5 +102,4 @@ project-root/
 │   └── makefile                    # Automated Testing
 │   └── scripts/
 │   └────  ingest_slow_requests.sh  # Load testing script
-
 ```

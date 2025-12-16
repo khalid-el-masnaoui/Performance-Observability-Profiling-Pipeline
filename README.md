@@ -132,3 +132,12 @@ docker compose up -d --build
 | SPX Web UI | http://localhost:8080/?SPX_KEY=dev&SPX_UI=1&SPX_UI_URI=/ 
 
 **Note**: The SPX web UI is only available when profiling is triggered!
+
+5. Application Endpoints
+
+- `/` — home route
+- `/api/users` — sample API route
+- `/metrics` — Prometheus metrics output
+- `/flamegraphs` — SPX flamegraph index page
+- `/spx-data/<file>.json` — direct SPX flamegraph JSON access
+- `/status` — PHP-FPM status endpoint

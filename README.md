@@ -114,3 +114,7 @@ cd Performance-Observability-Profiling-Pipeline
 ```
 
 2. Copy `.env.example` to `.env` in the repo root folder(configure you SLACK_WEBHOOK URL ...etc)
+
+3. Start the full stack
+```bash
+docker compose up -d --build

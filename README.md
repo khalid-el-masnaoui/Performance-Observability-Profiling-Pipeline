@@ -112,3 +112,5 @@ project-root/
 git clone https://github.com/khalid-el-masnaoui/Performance-Observability-Profiling-Pipeline
 cd Performance-Observability-Profiling-Pipeline
 ```
+
+2. Copy `.env.example` to `.env` in the repo root folder(configure you SLACK_WEBHOOK URL ...etc)

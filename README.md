@@ -118,3 +118,17 @@ cd Performance-Observability-Profiling-Pipeline
 3. Start the full stack
 ```bash
 docker compose up -d --build
+
+```
+4. Services
+
+| Service | URL |
+|---|---|
+| App | http://localhost:8080 |
+| Prometheus  |	http://localhost:9090 |
+| Grafana |	http://localhost:3000 |
+| Alertmanager  |	 http://localhost:9093
+| Flamegraph UI  |	http://localhost:8080/flamegraphs
+| SPX Web UI | http://localhost:8080/?SPX_KEY=dev&SPX_UI=1&SPX_UI_URI=/ 
+
+**Note**: The SPX web UI is only available when profiling is triggered!

@@ -104,7 +104,15 @@ project-root/
 │   └────  ingest_slow_requests.sh  # Load testing script
 ```
 
-## Setup & Installation
+## Setup, Requirement & Installation
+
+### Requirements
+
+- Docker & Docker Compose
+- Optional : 
+    - Node.js & K6 (only if need to test locally with `/testing`)
+
+### Setup & INstallation 
 
 1. Clone the repository
 

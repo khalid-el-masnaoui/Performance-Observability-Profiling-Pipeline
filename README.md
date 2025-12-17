@@ -112,7 +112,7 @@ project-root/
 - Optional : 
     - Node.js & K6 (only if need to test locally with `/testing`)
 
-### Setup & INstallation 
+### Setup & installation 
 
 1. Clone the repository
 
@@ -149,3 +149,11 @@ docker compose up -d --build
 - `/flamegraphs` — SPX flamegraph index page
 - `/spx-data/<file>.json` — direct SPX flamegraph JSON access
 - `/status` — PHP-FPM status endpoint
+
+### Customization
+
+- Add new Prometheus rules in `prometheus/alerts.yml`
+- Extend the PHP app in `src/index.php`
+- Add new SPX profiling logic in `src/spx_prepend.php`
+- Add UI or search to `src/flamegraphs.php`
+- Change Nginx routing in `nginx/default.conf`

@@ -190,3 +190,11 @@ Prometheus evaluates:
 If triggered:
 - Alertmanager sends webhook to trigger SPX profiling
 - Alertmanager sends a slack notification
+
+### 4. SPX Profiling
+
+When a slow endpoint is detected:
+
+- SPX is enabled dynamically
+- Only specific requests are profiled (subsequent request of the same route)
+- Flamegraphs are generated automatically

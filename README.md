@@ -181,3 +181,12 @@ Example metric:
 ```bash
 app_request_duration_seconds_bucket{route="/api/users"}
 ```
+
+### 3. Alerting
+
+Prometheus evaluates:
+- p95 latency per route
+
+If triggered:
+- Alertmanager sends webhook to trigger SPX profiling
+- Alertmanager sends a slack notification

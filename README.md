@@ -222,3 +222,8 @@ A web UI allows:
 - you can use tools like `speedscope` or use SPX internal flamegraphs viewer (locally) for :
     - Viewing interactive profiles
     - Debugging slow requests
+
+
+### End-to-End Workflow Example
+
+1. Load test (k6): **`slow injection`** (`?delay=1.5`)

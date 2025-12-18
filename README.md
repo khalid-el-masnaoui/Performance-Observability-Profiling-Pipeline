@@ -112,7 +112,7 @@ project-root/
 - Optional : 
     - Node.js & K6 (only if need to test locally with `/testing`)
 
-### Setup & installation 
+### Setup & Installation 
 
 1. Clone the repository
 
@@ -157,3 +157,14 @@ docker compose up -d --build
 - Add new SPX profiling logic in `src/spx_prepend.php`
 - Add UI or search to `src/flamegraphs.php`
 - Change Nginx routing in `nginx/default.conf`
+
+## How it works
+
+### 1. Request Flow
+
+Each request passes through:
+
+- Nginx routing
+- PHP execution
+- Metrics collection (Prometheus client)
+- Timing instrumentation per route

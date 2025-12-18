@@ -160,7 +160,18 @@ docker compose up -d --build
 
 ## How it works
 
-### 1. Request Flow
+#### Workflow
+
+#### 1. Load Testing (k6)
+
+k6 simulates:
+
+- baseline traffic
+- slow endpoint traffic (?delay=)
+
+**Note**: k6 traffic is automatically triggered the first time the application is up (using docker `entrypoint`). You can also generate traffic locally using `testing/`
+
+#### 2. Request Flow
 
 Each request passes through:
 
@@ -169,7 +180,7 @@ Each request passes through:
 - Metrics collection (Prometheus client)
 - Timing instrumentation per route
 
-### 2. Metrics Collection
+#### 3. Metrics Collection
 
 Each endpoint exposes:
 
@@ -182,7 +193,7 @@ Example metric:
 app_request_duration_seconds_bucket{route="/api/users"}
 ```
 
-### 3. Alerting
+#### 4. Alerting
 
 Prometheus evaluates:
 - p95 latency per route
@@ -191,7 +202,7 @@ If triggered:
 - Alertmanager sends webhook to trigger SPX profiling
 - Alertmanager sends a slack notification
 
-### 4. SPX Profiling
+#### 5. SPX Profiling
 
 When a slow endpoint is detected:
 
@@ -199,7 +210,7 @@ When a slow endpoint is detected:
 - Only specific requests are profiled (subsequent request of the same route)
 - Flamegraphs are generated automatically
 
-### 5. Flamegraphs
+#### 6. Flamegraphs
 
 Generated profiles are stored in:
 ```bash
@@ -211,12 +222,3 @@ A web UI allows:
 - you can use tools like `speedscope` or use SPX internal flamegraphs viewer (locally) for :
     - Viewing interactive profiles
     - Debugging slow requests
-
-### 6. Load Testing (k6)
-
-k6 simulates:
-
-- baseline traffic
-- slow endpoint traffic (?delay=)
-
-**Note**: k6 traffic is automatically triggered the first time the application is up (using docker `entrypoint`). You can also generate traffic locally using `testing/`

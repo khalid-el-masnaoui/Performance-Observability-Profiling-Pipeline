@@ -211,3 +211,12 @@ A web UI allows:
 - you can use tools like `speedscope` or use SPX internal flamegraphs viewer (locally) for :
     - Viewing interactive profiles
     - Debugging slow requests
+
+### 6. Load Testing (k6)
+
+k6 simulates:
+
+- baseline traffic
+- slow endpoint traffic (?delay=)
+
+**Note**: k6 traffic is automatically triggered the first time the application is up (using docker `entrypoint`). You can also generate traffic locally using `testing/`

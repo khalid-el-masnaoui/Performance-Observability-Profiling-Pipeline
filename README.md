@@ -168,3 +168,16 @@ Each request passes through:
 - PHP execution
 - Metrics collection (Prometheus client)
 - Timing instrumentation per route
+
+### 2. Metrics Collection
+
+Each endpoint exposes:
+
+- Request duration histogram
+- Route labels
+- Status codes
+
+Example metric:
+```bash
+app_request_duration_seconds_bucket{route="/api/users"}
+```

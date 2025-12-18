@@ -198,3 +198,16 @@ When a slow endpoint is detected:
 - SPX is enabled dynamically
 - Only specific requests are profiled (subsequent request of the same route)
 - Flamegraphs are generated automatically
+
+### 5. Flamegraphs
+
+Generated profiles are stored in:
+```bash
+/spx-data/
+```
+
+A web UI allows:
+- Listing flamegraphs (as json files)
+- you can use tools like `speedscope` or use SPX internal flamegraphs viewer (locally) for :
+    - Viewing interactive profiles
+    - Debugging slow requests

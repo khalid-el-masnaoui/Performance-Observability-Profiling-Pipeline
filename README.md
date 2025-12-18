@@ -227,3 +227,13 @@ A web UI allows:
 ### End-to-End Workflow Example
 
 1. Load test (k6): **`slow injection`** (`?delay=1.5`)
+
+2. Prometheus detects anomaly: **`p95 increases`**
+
+3. Alertmanager triggers webhook: sends alert event to **`spx-trigger`** service
+
+4. SPX enabled dynamically: only for affected route
+
+5. Flamegraph generated: stored in **`/spx-data`**
+
+6. **`UI visualization`**: inspect flamegraph & identify bottlenecks

@@ -169,7 +169,7 @@ k6 simulates:
 - baseline traffic
 - slow endpoint traffic (?delay=)
 
-**Note**: k6 traffic is automatically triggered the first time the application is up (using docker `entrypoint`). You can also generate traffic locally using `testing/`
+**Note**: k6 traffic is automatically triggered the first time the application is up (using `k6/entrypoint.sh`). You can also generate traffic locally using `testing/makefile`
 
 #### 2. Request Flow
 
@@ -251,4 +251,32 @@ A web UI allows:
 next request → SPX profiling ON
          ↓
 flamegraph generated
+```
+
+### More Details
+
+#### Prometheus Metrics
+
+The PHP app registers metrics using `promphp/prometheus_client_php`.
+
+Example metrics exposed by the app:
+
+- `app_request_duration_seconds_bucket`
+- `app_request_duration_seconds_sum`
+- `app_request_duration_seconds_count`
+- `app_requests_total`
+
+Metrics are labeled by:
+
+- `method`
+- `route`
+- `status`
+
+Route normalization is applied in `src/index.php` to convert numeric IDs and UUIDs into stable labels.
+
+Query example:
+```promql
+histogram_quantile(0.95,
+  sum(rate(app_request_duration_seconds_bucket[2m])) by (le, route)
+)
 ```

@@ -237,3 +237,18 @@ A web UI allows:
 5. Flamegraph generated: stored in **`/spx-data`**
 
 6. **`UI visualization`**: inspect flamegraph & identify bottlenecks
+
+```bash
+0-30s   → metrics accumulate
+30-60s  → p95 increases
+~60s    → alert enters "pending"
+~120s   → alert fires
+         ↓
+         slack alert
+         ↓
+         spx-trigger → Redis
+         ↓
+next request → SPX profiling ON
+         ↓
+flamegraph generated
+```

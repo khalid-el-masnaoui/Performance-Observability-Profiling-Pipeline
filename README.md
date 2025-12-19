@@ -312,3 +312,19 @@ The `k6` service can be used to generate synthetic load.
 The default script is at `k6/ingest_slow_requests.js` and is launched through `k6/entrypoint.sh`.
 
 **Note** : You can also load test the application using `testing/makefile`
+
+
+
+## Troubleshooting
+1. No flamegraphs generated
+
+Check:
+```bash
+chmod -R 777 spx-data
+chmod 33:33 spx-data # 33 is the UID of www-data which php-fpm/nginx runs under
+```
+
+Make sure keys are created in redis
+```bash
+docker exec -it prometheus-spx-redis-1 redis-cli KEYS "*"
+```

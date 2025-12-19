@@ -292,3 +292,14 @@ Example alert:
   ) > 1
   for: 2m
 ```
+
+#### SPX Profiling Integration
+
+The PHP image installs SPX in `php/php.dockerfile`.
+
+`src/spx_prepend.php` checks Redis for an active profiling key:
+
+- If Redis contains `spx:<route>`, SPX profiling is started for that request
+- Profiling results are stored in `spx-data/`
+
+The `spx-trigger` service receives alerts and writes the route key into Redis with a short TTL.

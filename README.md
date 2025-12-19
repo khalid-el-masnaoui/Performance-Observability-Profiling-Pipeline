@@ -39,7 +39,6 @@ This project is intended as a practical demo of how to wire **PHP request metric
          - **[Running Load Tests With K6](#running-load-tests-with-k6)**
    - **[Troubleshooting](#troubleshooting)**
 
-
 ## Overview
 
 This project implements a modern performance engineering pipeline where:
@@ -228,6 +227,8 @@ If triggered:
 - Alertmanager sends webhook to trigger SPX profiling
 - Alertmanager sends a slack notification
 
+
+
 #### 5. SPX Profiling
 
 When a slow endpoint is detected:
@@ -235,6 +236,10 @@ When a slow endpoint is detected:
 - SPX is enabled dynamically
 - Only specific requests are profiled (subsequent request of the same route)
 - Flamegraphs are generated automatically
+
+<p float="left" align="middle">
+  <img src="images/slack-alert.png" width="40%" /> 
+</p>
 
 #### 6. Flamegraphs
 
@@ -248,6 +253,10 @@ A web UI allows:
 - you can use tools like `speedscope` or use SPX internal flamegraphs viewer (locally) for :
     - Viewing interactive profiles
     - Debugging slow requests
+
+<p float="left" align="middle">
+  <img src="images/flamegraph.png" width="40%" /> 
+</p>
 
 
 ### End-to-End Workflow Example
@@ -336,7 +345,7 @@ The `spx-trigger` service receives alerts and writes the route key into Redis wi
 The `k6` service can be used to generate synthetic load.
 
 The default script is at `k6/ingest_slow_requests.js` and is launched through `k6/entrypoint.sh`.
-
+## Example Of The Generated Slack Alert & flamegraphs
 **Note** : You can also load test the application using `testing/makefile`
 
 

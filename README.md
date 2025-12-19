@@ -328,3 +328,28 @@ Make sure keys are created in redis
 ```bash
 docker exec -it prometheus-spx-redis-1 redis-cli KEYS "*"
 ```
+
+2. SPX not triggering
+
+Ensure:
+```ini
+spx.http_enabled=1
+spx.http_key=dev
+```
+
+3. 404 on flamegraphs
+
+Check Nginx:
+
+```nginx
+location ^~ /spx-data/ {
+    alias /tmp/spx/;
+    autoindex on;
+}
+```
+
+Check flamegraphs data is stored in `spx-data/`
+```bash
+sudo chown 33:33 spx-data/ #33 is the UID for www-data which nginx/php-fpm runs under
+sudo chmod -R 777 spx-data/
+```

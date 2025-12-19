@@ -280,3 +280,15 @@ histogram_quantile(0.95,
   sum(rate(app_request_duration_seconds_bucket[2m])) by (le, route)
 )
 ```
+
+#### Alerting (Prometheus → Alertmanager)
+
+Example alert:
+
+```yaml
+- alert: SlowEndpoint
+  expr: histogram_quantile(0.95,
+    sum(rate(app_request_duration_seconds_bucket[2m])) by (le, route)
+  ) > 1
+  for: 2m
+```

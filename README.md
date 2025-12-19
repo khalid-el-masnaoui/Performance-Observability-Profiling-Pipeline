@@ -14,6 +14,11 @@ This project integrates:
 
 This project is intended as a practical demo of how to wire **PHP request metrics**, **alerting**, and **dynamic profiler activation** together into a reproducible Docker-based observability pipeline.
 
+## Table Of Contents
+
+
+
+
 ## Overview
 
 This project implements a modern performance engineering pipeline where:

@@ -16,7 +16,28 @@ This project is intended as a practical demo of how to wire **PHP request metric
 
 ## Table Of Contents
 
-
+   - **[Overview](#overview)**
+   - **[Architecture](#architecture)**
+   - **[Repository Layout](#repository-layout)**
+   - **[Setup, Requirement & Installation](#setup-requirement-installation)**
+      - **[Requirements](#requirements)**
+      - **[Setup & Installation ](#setup-installation)**
+      - **[Customization](#customization)**
+   - **[How it works](#how-it-works)**
+        - **[Workflow](#workflow)**
+        - **[1. Load Testing (k6)](#1-load-testing-k6)**
+        - **[2. Request Flow](#2-request-flow)**
+        - **[3. Metrics Collection](#3-metrics-collection)**
+        - **[4. Alerting](#4-alerting)**
+        - **[5. SPX Profiling](#5-spx-profiling)**
+        - **[6. Flamegraphs](#6-flamegraphs)**
+      - **[End-to-End Workflow Example](#end-to-end-workflow-example)**
+      - **[More Details](#more-details)**
+         - **[Prometheus Metrics](#prometheus-metrics)**
+         - **[Alerting (Prometheus → Alertmanager)](#alerting-prometheus-alertmanager)**
+         - **[SPX Profiling Integration](#spx-profiling-integration)**
+         - **[Running Load Tests With K6](#running-load-tests-with-k6)**
+   - **[Troubleshooting](#troubleshooting)**
 
 
 ## Overview

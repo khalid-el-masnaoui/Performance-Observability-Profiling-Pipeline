@@ -303,3 +303,12 @@ The PHP image installs SPX in `php/php.dockerfile`.
 - Profiling results are stored in `spx-data/`
 
 The `spx-trigger` service receives alerts and writes the route key into Redis with a short TTL.
+
+
+#### Running Load Tests With K6
+
+The `k6` service can be used to generate synthetic load.
+
+The default script is at `k6/ingest_slow_requests.js` and is launched through `k6/entrypoint.sh`.
+
+**Note** : You can also load test the application using `testing/makefile`

@@ -351,7 +351,7 @@ The default script is at `k6/ingest_slow_requests.js` and is launched through `k
 
 
 ## Troubleshooting
-1. No flamegraphs generated
+**No flamegraphs generated**
 
 Check:
 ```bash
@@ -364,7 +364,7 @@ Make sure keys are created in redis
 docker exec -it prometheus-spx-redis-1 redis-cli KEYS "*"
 ```
 
-2. SPX not triggering
+**SPX not triggering**
 
 Ensure:
 ```ini
@@ -372,7 +372,7 @@ spx.http_enabled=1
 spx.http_key=dev
 ```
 
-3. 404 on flamegraphs
+**404 on flamegraphs**
 
 Check Nginx:
 

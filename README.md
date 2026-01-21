@@ -38,6 +38,8 @@ This project is intended as a practical demo of how to wire **PHP request metric
          - **[SPX Profiling Integration](#spx-profiling-integration)**
          - **[Running Load Tests With K6](#running-load-tests-with-k6)**
    - **[Troubleshooting](#troubleshooting)**
+   - **[Notes](#notes)**
+   - **[Additional Resources](#additional-resources)**
 
 ## Overview
 

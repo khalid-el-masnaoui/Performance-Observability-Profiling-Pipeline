@@ -1,4 +1,4 @@
 .env
 .vscode/
-spx-data/*
+spx-data/
 src/vendor/

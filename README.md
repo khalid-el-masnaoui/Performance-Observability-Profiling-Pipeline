@@ -40,6 +40,7 @@ This project is intended as a practical demo of how to wire **PHP request metric
    - **[Troubleshooting](#troubleshooting)**
    - **[Notes](#notes)**
    - **[Additional Resources](#additional-resources)**
+   - **[License](#license)**
 
 ## Overview
 

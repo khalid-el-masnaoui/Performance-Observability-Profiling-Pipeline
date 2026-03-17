@@ -138,7 +138,7 @@ project-root/
 
 - Docker & Docker Compose
 - Optional : 
-    - Node.js & K6 (only if need to test locally with `/testing`)
+    - K6 (only if need to test locally with `/testing`)
 
 ### Setup & Installation 
 

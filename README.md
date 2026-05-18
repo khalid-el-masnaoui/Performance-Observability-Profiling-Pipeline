@@ -129,7 +129,7 @@ project-root/
 
 ### Setup & Installation 
 
-1. Clone the repository
+1. Clone the repository**
 
 ```bash
 git clone https://github.com/khalid-el-masnaoui/Performance-Observability-Profiling-Pipeline
@@ -263,20 +263,9 @@ A web UI allows:
 
 6. **`UI visualization`**: inspect flamegraph & identify bottlenecks
 
-```bash
-0-30s   → metrics accumulate
-30-60s  → p95 increases
-~60s    → alert enters "pending"
-~120s   → alert fires
-         ↓
-         slack alert
-         ↓
-         spx-trigger → Redis
-         ↓
-next request → SPX profiling ON
-         ↓
-flamegraph generated
-```
+<p float="left" align="middle">
+    <img src="images/workflow.png" width="80%" /> 
+</p>
 
 ### More Details
 

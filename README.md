@@ -348,9 +348,15 @@ The `spx-trigger` service receives alerts and writes the route key into Redis wi
 The `k6` service can be used to generate synthetic load.
 
 The default script is at `k6/ingest_slow_requests.js` and is launched through `k6/entrypoint.sh`.
-## Example Of The Generated Slack Alert & flamegraphs
+
 **Note** : You can also load test the application using `testing/makefile`
 
+
+## Notes
+
+- Route normalization is implemented in `src/index.php` to replace numeric IDs and UUIDs with normalized route labels.
+- Metrics are recorded using Prometheus histograms with route, method, and status labels.
+- The sample PHP app is intentionally simple and can be replaced by any PHP codebase.
 
 
 ## Troubleshooting
@@ -391,12 +397,6 @@ Check flamegraphs data is stored in `spx-data/`
 sudo chown 33:33 spx-data/ #33 is the UID for www-data which nginx/php-fpm runs under
 sudo chmod -R 777 spx-data/
 ```
-## Notes
-
-- Route normalization is implemented in `src/index.php` to replace numeric IDs and UUIDs with normalized route labels.
-- Metrics are recorded using Prometheus histograms with route, method, and status labels.
-- The sample PHP app is intentionally simple and can be replaced by any PHP codebase.
-
 
 ## Additional Resources
 

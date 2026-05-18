@@ -69,7 +69,7 @@ The stack is designed to demonstrate a simple full pipeline:
 2. PHP app records Prometheus metrics
 3. Prometheus scrapes metrics and evaluates alerts
 4. Alertmanager POSTs matched alerts to **`spx-trigger`** service
-5. **``spx-trigger`** service:
+5. **`spx-trigger`** service:
    - SPX profiling is triggered
    - Slack notification is sent
 

@@ -59,32 +59,9 @@ The system is fully containerized and reproducible using Docker Compose.
 
 The stack is designed to demonstrate a simple full pipeline:
 
-```bash
-[k6 Load Test]
-      ↓
-   Nginx
-      ↓
-
- PHP-FPM Application
-      ↓
-Prometheus Metrics Exporter
-      ↓
-Prometheus Server
-      ↓
-Alertmanager
-      ↓
-Slow Requests Detected (P95)
-      ↓
-SPX Trigger Service
-      ↓
-SPX PHP Profiler
-      ↓
-Flamegraph Storage (/spx-data)
-      ↓
-Flamegraph UI (Web Viewer)
-      ↓
-Grafana Dashboards + Slack Alerts
-```
+<p float="left" align="middle">
+    <img src="images/pipeline.png" width="80%" /> 
+</p>
 
 
 ## Repository Layout
